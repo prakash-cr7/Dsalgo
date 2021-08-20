@@ -1,7 +1,7 @@
 {
+    "C_Cpp.errorSquiggles": "Enabled",
     "files.associations": {
         "*.js": "javascriptreact",
-        "*.tcc": "cpp",
-        "iostream": "cpp"
+        "ostream": "cpp"
     }
 }

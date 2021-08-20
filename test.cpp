@@ -3,13 +3,19 @@ using namespace std;
 
 int main()
 {
-    int a = 5, b=4;
-    b = a*b;
-    a = b/a;
-    b = b/a;
-    cout<<a<<" "<<b;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n, k;
+        cin >> n >> k;
+        string s;
+        cin>>s;
+        int count{};
+        for (size_t i = 0; i < n; i++)
+        {
+            if(s[i] == '1') count++;
+        }
+        
+    }
 }
-// 1 3 2 1
-// 1 1 2 2
-// 1 2 1 2
-// 1 1 1 2
