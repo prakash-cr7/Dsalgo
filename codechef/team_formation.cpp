@@ -32,6 +32,10 @@ int main()
 
         //pair remaining only and both
         count += min(both, (max(onlyS,onlyT) - min(onlyT,onlyS)));
+
+        both-= min(both, (max(onlyS,onlyT) - min(onlyT,onlyS)));
+
+        count+= (both/2);
         
         cout<<count<<endl;
     }
