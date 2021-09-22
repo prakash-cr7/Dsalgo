@@ -1,38 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int f(){
+int a[11] = {2,14,8,22,2,34,22,6,6,14,8};
+    int r = a[0];
+    for(int i=0; i<11; i++)
+    r = r^a[i];
+    return r;
+}
+
 int main()
 {
-    int q;
-    cin>>q;
-    while (q--)
-    {
-        int n;
-        cin>>n;
-        string s,t;
-        cin>>s>>t;
-        int both{},onlyS{},onlyT{},none{};
-        for (size_t i = 0; i < n; i++)
-        {
-            if(s[i] == '1' && t[i] == '1' ) both++;
-            else if(s[i] == '1' && t[i] == '0') onlyS++;
-            else if(s[i] == '0' && t[i] == '1') onlyT++;
-            else none++;
-        }
-        int count{};
-
-        //pair both with none
-        count += min(both, none);
-
-        // remaining both
-        both -= min(both, none);
-
-        //pair only with each other
-        count += min(onlyT, onlyS);
-
-        //pair remaining only and both
-        count += min(both, (max(onlyS,onlyT) - min(onlyT,onlyS)));
-        
-        cout<<count<<endl;
-    }
+   cout<< f();
 }
