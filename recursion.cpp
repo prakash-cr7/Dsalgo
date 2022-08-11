@@ -97,10 +97,24 @@ void permutaion(string s, int i = 0){
     }
 }
 
+// void subArray(vector<int> a,int b = 0, int i=0){
+//     if(b == a.size()) {
+//         for(int j=0; j<=i; j++)
+//         cout << a[j] << " ";
+//         cout << endl;
+//         return;
+//     }
+    
+//     subArray(a,b+1,i+1);
+//     subArray(a,b+1,i);
+// }
+
 int main()
 {
-    permutaion("abcd");
+    vector<int> a = {1,2,3};
+    subArray(a);
 }
+
 
 // 0 1 1 2 3 5
 
