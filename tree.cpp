@@ -28,7 +28,6 @@ void inOrder(Tree* root)
 int height(Tree *root){
     if(root == nullptr) return 0;
     int a = max(height(root->left), height(root->right)) + 1;
-    cout << root->value << " " << a << endl;
     return a;
 }
 
