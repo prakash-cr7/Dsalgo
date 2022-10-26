@@ -4,31 +4,16 @@ using namespace std;
 
 template <class T>
 class Super {
-    public:
-    T id;
-
-    Super(){
-
-    }
-
-    Super(T id){
-        this->id = id;
-    }
-
-    bool operator == (const Super<T> &s){
-        return id == s.id;
-    }
-
-    T operator + (const int a){
-        return id+a;
-    }
+    int length;
+    int time;
+    T data;
 };
 
 class Base {
     public:
     int level;
 
-    void print(){
+    virtual void print(){
         cout << "Hello\n";
     }
 
@@ -56,7 +41,7 @@ class Child : public Base {
         level = 5;
     }
 
-    void hello(){
+    void print(){
         cout << "Hello from child\n";
     }
 
@@ -79,12 +64,8 @@ class Child : public Base {
 
 
 int main(){
-    Super<float> s(1);
-    Super<float> s1(1);
-    Super<float> x = s1+7;
-    bool t = s == s1 ;
-    cout <<t << " " << x.id;
-    // c3.print();
-    // Child b;
-    // b.hello("prakash");
+    Base* b;
+    Child c;
+    b= &c;
+    cout << sizeof(c);
 }
