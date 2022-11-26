@@ -26,7 +26,7 @@ int lcs(string s1, string s2, int m, int n, vector<vector<int>> &dp){
         else {
             dp[m][n] = max(lcs(s1,s2,m-1,n,dp), lcs(s1,s2,m,n-1,dp));
         }
-        return dp[m][n];
+    return dp[m][n];
 }
 
 string lcsString(string &s1, string &s2, int m, int n, vector<vector<string>> &dp , string ans = ""){
